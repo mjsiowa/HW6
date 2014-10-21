@@ -44,23 +44,106 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:DetailsView ID="dtlvw_newrecipes" runat="server" AutoGenerateRows="False" DataKeyNames="recipeID" DataSourceID="sds_mstaub_recipes" DefaultMode="Insert" Height="50px" Width="333px">
-                <Fields>
-                    <asp:BoundField DataField="name" HeaderText="Recipe Name" SortExpression="name" />
-                    <asp:BoundField DataField="submitby" HeaderText="Submitted by" SortExpression="submitby" />
-                    <asp:BoundField DataField="ing_1" HeaderText="Ingredient #1" SortExpression="ing_1" />
-                    <asp:BoundField DataField="ing_2" HeaderText="Ingredient #2" SortExpression="ing_2" />
-                    <asp:BoundField DataField="ing_3" HeaderText="Ingredient #3" SortExpression="ing_3" />
-                    <asp:BoundField DataField="ing_4" HeaderText="Ingredient #4" SortExpression="ing_4" />
-                    <asp:BoundField DataField="ing_5" HeaderText="Ingredient #5" SortExpression="ing_5" />
-                    <asp:BoundField DataField="prep" HeaderText="Preparation" SortExpression="prep" />
-                    <asp:BoundField DataField="notes" HeaderText="Notes" SortExpression="notes" />
-                    <asp:CommandField ShowInsertButton="True" />
-                </Fields>
-            </asp:DetailsView>
+            <asp:FormView ID="Fmvw_newrecipe" runat="server" DataKeyNames="recipeID" DataSourceID="sds_mstaub_recipes" DefaultMode="Insert" Width="571px">
+                <EditItemTemplate>
+                </EditItemTemplate>
+                
+                <InsertItemTemplate>
+                   <table>
+                    <tr><td style="text-align:right;">(*)Receipe Name:</td>
+                        <td><asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' /></td>
+                       <td>
+                           <asp:RequiredFieldValidator ID="NameFieldValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Please enter recipe name"></asp:RequiredFieldValidator>
+                           </td></tr>
+                           <tr>
+                               <td style="text-align:right;">(*)Submitted by:</td>
+                               <td>
+                                   <asp:TextBox ID="submitbyTextBox" runat="server" Text='<%# Bind("submitby") %>' />
+                               </td>
+                               <td>
+                                   <asp:RequiredFieldValidator ID="SubmittedFieldValidator" runat="server" ErrorMessage="Please enter submitted by name" ControlToValidate="submitbyTextBox"></asp:RequiredFieldValidator></td>
+                           </tr>
+                         
+                               <tr>
+                                   <td style="text-align:right;">(*)Ingredent #1</td>
+                                   <td>
+                                       <asp:TextBox ID="ing_1TextBox" runat="server" Text='<%# Bind("ing_1") %>' />
+                                   </td>
+                                   <td>
+                                       <asp:RequiredFieldValidator ID="ing1_FieldValidator" runat="server" ErrorMessage="Please enter at least 1 ingredent" ControlToValidate="ing_1TextBox"></asp:RequiredFieldValidator></td>
+                               </tr>
+                               <tr>
+                                 
+                                       <td style="text-align:right;">Ingredent #2</td>
+                                       <td>
+                                           <asp:TextBox ID="ing_2TextBox" runat="server" Text='<%# Bind("ing_2") %>' />
+                                       </td>
+                                   <td></td>
+                                   </tr>
+                                   <tr>
+                                     
+                                           <td style="text-align:right;">Ingredent #3</td>
+                                           <td>
+                                               <asp:TextBox ID="ing_3TextBox" runat="server" Text='<%# Bind("ing_3") %>' />
+                                           </td>
+                                       <td></td>
+                                       </tr>
+                                       <tr>
+                                       
+                                               <td style="text-align:right;">Ingredent #4</td>
+                                               <td>
+                                                   <asp:TextBox ID="ing_4TextBox" runat="server" Text='<%# Bind("ing_4") %>' />
+                                               </td>
+                                           <td></td>
+                                           </tr>
+                                         
+                                               <tr>
+                                                   <td style="text-align:right;">Ingredent #5</td>
+                                                   <td>
+                                                       <asp:TextBox ID="ing_5TextBox" runat="server" Text='<%# Bind("ing_5") %>' />
+                                                   </td>
+                                                   <td></td>
+                                               </tr>
+                                               
+                                                   <tr>
+                                                       <td style="text-align:right;">(*)Preparation:</td>
+                                                       <td>
+                                                           <asp:TextBox ID="prepTextBox" runat="server" Rows="4" Text='<%# Bind("prep") %>' TextMode="MultiLine" />
+                                                       </td>
+                                                       <td>
+                                                           <asp:RequiredFieldValidator ID="prep_RequiredFieldValidator" runat="server" ErrorMessage="Please enter preparation instructions" ControlToValidate="prepTextBox"></asp:RequiredFieldValidator></td>
+                                                   </tr>
+                                                   <tr>
+                                                    
+                                                           <td style="text-align:right;">Notes:</td>
+                                                           <td>
+                                                               <asp:TextBox ID="notesTextBox" runat="server" Rows="4" Text='<%# Bind("notes") %>' TextMode="MultiLine" />
+                                                           </td>
+                                                       <td></td>
+                                                       </tr>
+                                                     
+                                                           <tr>
+                                                               <td style="text-align:right;">
+                                                                   <asp:Button ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                                                               </td>
+                                                               <td>
+                                                                   <asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                                                               </td>
+                                                               <td></td>
+                                                           </tr>
+                
+
+                </table>
+                    <br />
+                
+                </InsertItemTemplate>
+                <ItemTemplate>
+                        </ItemTemplate>
+            </asp:FormView>
+            <br />
         </div>
 
-        <div>Footer div</div>
+        <div>Footer div/div>
     </div>
     </form>
 </body>

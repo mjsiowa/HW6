@@ -4,14 +4,13 @@ Partial Class NewRecipe
 
 
 
-    Protected Sub dtlvw_newrecipes_ItemInserted(sender As Object, e As DetailsViewInsertedEventArgs) Handles dtlvw_newrecipes.ItemInserted
-        Response.Redirect("./Default.aspx")
+    
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Fmvw_newrecipe.Focus()
 
     End Sub
 
-    
-    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
-        dtlvw_newrecipes.Focus()
-
+    Protected Sub Fmvw_newrecipe_ItemInserted(sender As Object, e As FormViewInsertedEventArgs) Handles Fmvw_newrecipe.ItemInserted
+        Response.Redirect("./Default.aspx")
     End Sub
 End Class
