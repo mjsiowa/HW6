@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <div class="header"><h1>Wicked Easy Recipes</h1><h2>Recipes with 5 ingredents or less!</h2></div>
+        <div class="header"><h1>Wicked Easy Recipes</h1><h2>Using 5 ingredents or less!</h2></div>
 
         <div class="navmenu"><table><tr><td>
             <asp:HyperLink ID="link_home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></td><td>
@@ -50,7 +50,7 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
-        <asp:GridView ID="grdvw_receipes" runat="server" CssClass="cssgridview" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="recipeID" DataSourceID="sds_mstaub_recipes" style="margin-right: 0px" Width="442px">
+        <asp:GridView ID="grdvw_receipes" runat="server" CssClass="cssgridview" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="recipeID" DataSourceID="sds_mstaub_recipes" style="margin-right: 0px" Width="442px" PageSize="6">
             <Columns>
                 <asp:BoundField DataField="name" HeaderText="Recipe Name" SortExpression="name" />
                 <asp:BoundField DataField="submitby" HeaderText="Submitted by" SortExpression="submitby" />

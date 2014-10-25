@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <div class="header"><h1>Wicked Easy Recipes</h1><h2>Recipes with 5 ingredents or less!</h2></div>
+    <div class="header"><h1>Wicked Easy Recipes</h1><h2>Using 5 ingredents or less!</h2></div>
 
         <div class="navmenu"><table><tr><td>
             <asp:HyperLink ID="link_home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></td><td>
@@ -55,14 +55,14 @@
                 </EditItemTemplate>
                 
                 <InsertItemTemplate>
-                   <table>
-                    <tr><td style="text-align:right;">(*)Receipe Name:</td>
+                   <table cellpadding="8" class="tables">
+                    <tr><td style="text-align:right; background-color:#F08080;">(*)Receipe Name:</td>
                         <td><asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' /></td>
                        <td>
                            <asp:RequiredFieldValidator ID="NameFieldValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Please enter recipe name"></asp:RequiredFieldValidator>
                            </td></tr>
                            <tr>
-                               <td style="text-align:right;">(*)Submitted by:</td>
+                               <td style="text-align:right; background-color:#F08080;">(*)Submitted by:</td>
                                <td>
                                    <asp:TextBox ID="submitbyTextBox" runat="server" Text='<%# Bind("submitby") %>' />
                                </td>
@@ -71,7 +71,7 @@
                            </tr>
                          
                                <tr>
-                                   <td style="text-align:right;">(*)Ingredent #1</td>
+                                   <td style="text-align:right; background-color:#F08080;">(*)Ingredent #1</td>
                                    <td>
                                        <asp:TextBox ID="ing_1TextBox" runat="server" Text='<%# Bind("ing_1") %>' />
                                    </td>
@@ -80,7 +80,7 @@
                                </tr>
                                <tr>
                                  
-                                       <td style="text-align:right;">Ingredent #2</td>
+                                       <td style="text-align:right; background-color:#F08080;">Ingredent #2</td>
                                        <td>
                                            <asp:TextBox ID="ing_2TextBox" runat="server" Text='<%# Bind("ing_2") %>' />
                                        </td>
@@ -88,7 +88,7 @@
                                    </tr>
                                    <tr>
                                      
-                                           <td style="text-align:right;">Ingredent #3</td>
+                                           <td style="text-align:right; background-color:#F08080;">Ingredent #3</td>
                                            <td>
                                                <asp:TextBox ID="ing_3TextBox" runat="server" Text='<%# Bind("ing_3") %>' />
                                            </td>
@@ -96,7 +96,7 @@
                                        </tr>
                                        <tr>
                                        
-                                               <td style="text-align:right;">Ingredent #4</td>
+                                               <td style="text-align:right; background-color:#F08080;">Ingredent #4</td>
                                                <td>
                                                    <asp:TextBox ID="ing_4TextBox" runat="server" Text='<%# Bind("ing_4") %>' />
                                                </td>
@@ -104,7 +104,7 @@
                                            </tr>
                                          
                                                <tr>
-                                                   <td style="text-align:right;">Ingredent #5</td>
+                                                   <td style="text-align:right; background-color:#F08080;">Ingredent #5</td>
                                                    <td>
                                                        <asp:TextBox ID="ing_5TextBox" runat="server" Text='<%# Bind("ing_5") %>' />
                                                    </td>
@@ -112,7 +112,7 @@
                                                </tr>
                                                
                                                    <tr>
-                                                       <td style="text-align:right;">(*)Preparation:</td>
+                                                       <td style="text-align:right; vertical-align:top; background-color:#F08080;">(*)Preparation:</td>
                                                        <td>
                                                            <asp:TextBox ID="prepTextBox" runat="server" Rows="4" Text='<%# Bind("prep") %>' TextMode="MultiLine" />
                                                        </td>
@@ -121,7 +121,7 @@
                                                    </tr>
                                                    <tr>
                                                     
-                                                           <td style="text-align:right;">Notes:</td>
+                                                           <td style="text-align:right; vertical-align:top; background-color:#F08080;">Notes:</td>
                                                            <td>
                                                                <asp:TextBox ID="notesTextBox" runat="server" Rows="4" Text='<%# Bind("notes") %>' TextMode="MultiLine" />
                                                            </td>
@@ -129,13 +129,13 @@
                                                        </tr>
                                                      
                                                            <tr>
-                                                               <td style="text-align:right;">
-                                                                   <asp:Button ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                                                               <td style="text-align:right; background-color:#F08080;">
+                                                                   <asp:Button ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Save" />
                                                                </td>
-                                                               <td>
+                                                               <td style="text-align:left; background-color:#F08080;">
                                                                    <asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                                                                </td>
-                                                               <td></td>
+                                                               <td style="text-align:right; background-color:#F08080;"></td>
                                                            </tr>
                 
 

@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-           <div class="header"><h1>Wicked Easy Recipes</h1><h2>Recipes with 5 ingredents or less!</h2></div>
+           <div class="header"><h1>Wicked Easy Recipes</h1><h2>Using 5 ingredents or less!</h2></div>
 
         <div class="navmenu"><table><tr><td>
             <asp:HyperLink ID="link_home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></td><td>
@@ -56,24 +56,86 @@
             <br />
             <span class="deletemessage"><asp:Label ID="lbl_deletedrecipe" runat="server"></asp:Label></span>
             <br />
-            <asp:DetailsView ID="dtlvw_recipes" runat="server" AutoGenerateRows="False" DataKeyNames="recipeID" DataSourceID="sds_mstaub_recipes" Height="50px" Width="383px">
-                <Fields>
-                    <asp:BoundField DataField="name" HeaderText="Recipe Name" SortExpression="name" />
-                    <asp:BoundField DataField="submitby" HeaderText="Submitted by" SortExpression="submitby" />
-                    <asp:BoundField DataField="ing_1" HeaderText="Ingredient #1" SortExpression="ing_1" />
-                    <asp:BoundField DataField="ing_2" HeaderText="Ingredient #2" SortExpression="ing_2" />
-                    <asp:BoundField DataField="ing_3" HeaderText="Ingredient #3" SortExpression="ing_3" />
-                    <asp:BoundField DataField="ing_4" HeaderText="Ingredient #4" SortExpression="ing_4" />
-                    <asp:BoundField DataField="ing_5" HeaderText="Ingredient #5" SortExpression="ing_5" />
-                    <asp:BoundField DataField="prep" HeaderText="Preparation" SortExpression="prep" />
-                    <asp:BoundField DataField="notes" HeaderText="Notes" SortExpression="notes" />
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                </Fields>
-            </asp:DetailsView>
+
+
+            <br />
+            <asp:FormView ID="fmvw_receipe" runat="server" DataKeyNames="recipeID" DataSourceID="sds_mstaub_recipes" style="margin-right: 1px" Width="326px">
+                <EditItemTemplate>
+                   
+                   <table>
+                   <tr><td>Receipe Name:</td>
+                    <td><asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' /></td>
+                    </tr><tr><td>Submitted by:</td>
+                    <td><asp:TextBox ID="submitbyTextBox" runat="server" Text='<%# Bind("submitby") %>' /></td>
+                    </tr>
+                    <tr><td>Ingredient #1:</td>
+                    <td><asp:TextBox ID="ing_1TextBox" runat="server" Text='<%# Bind("ing_1") %>' /></td>
+                    </tr>
+                    <tr><td>Ingredient #2:</td>
+                    <td><asp:TextBox ID="ing_2TextBox" runat="server" Text='<%# Bind("ing_2") %>' /></td>
+                    </tr>
+                    <tr><td>Ingredient #3:</td>
+                    <td><asp:TextBox ID="ing_3TextBox" runat="server" Text='<%# Bind("ing_3") %>' /></td>
+                    </tr>
+                    <tr><td>Ingredient #4:</td>
+                    <td><asp:TextBox ID="ing_4TextBox" runat="server" Text='<%# Bind("ing_4") %>' /></td>
+                    </tr>
+                    <tr><td>Ingredient #5:</td>
+                    <td><asp:TextBox ID="ing_5TextBox" runat="server" Text='<%# Bind("ing_5") %>' /></td>
+                    </tr>
+                    <tr><td>Preperation:</td>
+                    <td><asp:TextBox ID="prepTextBox" runat="server" Text='<%# Bind("prep") %>' /></td>
+                    </tr>
+                    <tr><td>Notes:</td>
+                    <td><asp:TextBox ID="notesTextBox" runat="server" Text='<%# Bind("notes") %>' /></td>
+                    </tr>
+                    <tr><td><asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" /></td>
+                    <td><asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" /></td>
+                </tr>
+                       </table>
+                       </EditItemTemplate>
+                <InsertItemTemplate>
+                    </InsertItemTemplate>
+                <ItemTemplate>
+                   
+                    <table cellpadding="8" class="tables" >
+                   <tr><td style="text-align:right; background-color:#F08080;">Receipe Name:</td>
+                    <td><asp:Label ID="nameLabel" runat="server" Text='<%# Bind("name") %>' /></td>
+                    </tr>
+                    <tr><td style="text-align:right; background-color:#F08080;">Submitted by:</td>
+                    <td><asp:Label ID="submitbyLabel" runat="server" Text='<%# Bind("submitby") %>' /></td>
+                    </tr>
+                    <tr><td style="text-align:right; background-color:#F08080;">Ingredient #1:</td>
+                    <td><asp:Label ID="ing_1Label" runat="server" Text='<%# Bind("ing_1") %>' /></td>
+                    </tr>
+                    <tr><td style="text-align:right; background-color:#F08080;">Ingredient #2:</td>
+                    <td><asp:Label ID="ing_2Label" runat="server" Text='<%# Bind("ing_2") %>' /></td>
+                    </tr>
+                    <tr><td style="text-align:right; background-color:#F08080;">Ingredient #3:</td>
+                    <td><asp:Label ID="ing_3Label" runat="server" Text='<%# Bind("ing_3") %>' /></td>
+                    </tr>
+                    <tr><td style="text-align:right; background-color:#F08080;">Ingredient #4:</td>
+                    <td><asp:Label ID="ing_4Label" runat="server" Text='<%# Bind("ing_4") %>' /></td>
+                    </tr>
+                    <tr><td style="text-align:right; background-color:#F08080;">Ingredient #5:</td>
+                    <td><asp:Label ID="ing_5Label" runat="server" Text='<%# Bind("ing_5") %>' /></td>
+                    </tr>
+                    <tr><td style="text-align:right; vertical-align:top; background-color:#F08080;">Preperation:</td>
+                    <td><asp:Label ID="prepLabel" runat="server" Text='<%# Bind("prep") %>' Height="40px" Width="200px" /></td>
+                    </tr>
+                    <tr><td style="text-align:right; vertical-align:top; background-color:#F08080;">Notes:</td>
+                    <td><asp:Label ID="notesLabel" runat="server" Text='<%# Bind("notes") %>' Height="40px" Width="200px" /></td>
+                    </tr>
+                     <tr>
+                    <td style="text-align:right; background-color:#F08080;"><asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" /></td>
+                    <td style="text-align:left; background-color:#F08080;"><asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" /></td>
+                    </tr>
+                       </table>
+                    </ItemTemplate>
+            </asp:FormView>
         <br />
     </div>
-         <div class="footer">Copyright 2014 Software Design and Development</div>
-    </div>
+         <div class="footer">Copyright 2014 Software Design and Development/div>
     </form>
 </body>
 </html>

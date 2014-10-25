@@ -12,7 +12,7 @@
 <body>
     <form id="form1" runat="server">
 <div>
-    <div class="header"><h1>Wicked Easy Recipes</h1><h2>Recipes with 5 ingredents or less!</h2></div>
+    <div class="header"><h1>Wicked Easy Recipes</h1><h2>Using 5 ingredents or less!</h2></div>
 
 <div class="navmenu"><table><tr><td>
             <asp:HyperLink ID="link_home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></td><td>
@@ -28,13 +28,13 @@
         <% If Not IsPostBack Then%>
 
         Your email address:<br />
-        <asp:TextBox ID="senderAddress" runat="server"></asp:TextBox>
+        <asp:TextBox ID="senderAddress" runat="server" Width="259px"></asp:TextBox>
         <br />
         <br />
        
          Your message:<br /> 
         <!-- to make your box bigger add rows, columns, and textmode -->
-        <asp:TextBox ID="senderMessage" runat="server" Rows="20" Columns="30" TextMode="MultiLine"></asp:TextBox>
+        <asp:TextBox ID="senderMessage" runat="server" Rows="20" Columns="30" TextMode="MultiLine" Height="226px" Width="393px"></asp:TextBox>
         
         <br />
         <br />

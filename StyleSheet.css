@@ -27,10 +27,13 @@ a:hover, a:active { color:blue; }
 .footer {padding-top:18px; padding-bottom:6px; margin-left:6px;
 }
 
-.navmenu { padding-top:10px; padding-bottom:10px; font-size:18px; background-color:white; margin-left:12px; max-width:746px; border:2px solid black;
+.navmenu {padding-top:10px; padding-bottom:10px; font-size:18px; margin-left:auto; margin-right:auto;
 }
 
-.mainbody {padding-top:10px; padding-bottom:10px; font-size:14px; margin-left:auto; margin-right:auto; max-width:750px; font-size:14px;   
+.mainbody {padding-top:10px; padding-bottom:10px; font-size:14px;  font-size:14px;   
+}
+
+.tables { padding:10px; background-color:#FFFF99; color:#696969; border:1px solid black; 
 }
 
 
@@ -43,14 +46,16 @@ a:hover, a:active { color:blue; }
 
 .cssgridview .alt {background-color:#F08080;}
 
-#link_home { padding:10px; background-color:#FFFF99; color:#696969; border:1px solid black;
+
+
+#link_home { padding:10px; background-color:#FFFF99; color:#696969; border:2px solid black;
 }
 
-#link_new { padding:10px; background-color:#FFFF99; color:#696969; border:1px solid black;
+#link_new { padding:10px; background-color:#FFFF99; color:#696969; border:2px solid black;
 }
 
-#link_about { padding:10px; background-color:#FFFF99; color:#696969; border:1px solid black;
+#link_about { padding:10px; background-color:#FFFF99; color:#696969; border:2px solid black;
 }
 
-#link_contact { padding:10px; background-color:#FFFF99; color:#696969; border:1px solid black;
+#link_contact { padding:10px; background-color:#FFFF99; color:#696969; border:2px solid black;
 }
