@@ -17,15 +17,14 @@
             <asp:HyperLink ID="link_home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></td><td>
             <asp:HyperLink ID="link_new" runat="server" NavigateUrl="~/newrecipe.aspx">New Recipe</asp:HyperLink></td><td>
                 <asp:HyperLink ID="link_about" runat="server" NavigateUrl="~/aboutus.aspx">About Us</asp:HyperLink></td><td>
-                <asp:HyperLink ID="link_contact" runat="server" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink></td></tr></table>
+                <asp:HyperLink ID="link_contact" runat="server" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink></td>
+
+                             </tr></table>
 
         </div>
 
-
-
-
-    
-    <div class="mainbody">
+    <br />
+    <div id="aboutus">
     <h1>Our Story....</h1>
     
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et nulla leo. Phasellus pretium tortor lectus, ac pellentesque enim suscipit quis. Donec facilisis ante in orci finibus suscipit. Fusce vel urna commodo, cursus felis vel, vestibulum elit. Nam at sapien in odio ultrices fermentum eu sed elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce tempor risus velit, sit amet aliquet metus semper laoreet. Pellentesque accumsan diam eget luctus facilisis. Pellentesque nec lacus mi. Mauris venenatis mi est, ut fermentum ligula malesuada eget. Curabitur vestibulum nulla et mi imperdiet egestas. Sed ac aliquet libero, in congue purus. In hac habitasse platea dictumst.

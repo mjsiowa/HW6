@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="default.aspx.vb" Inherits="_default" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="contact.aspx.vb" Inherits="_contact" %>
 
 <!DOCTYPE html>
 
@@ -20,19 +20,19 @@
                 <asp:HyperLink ID="link_about" runat="server" NavigateUrl="~/aboutus.aspx">About Us</asp:HyperLink></td><td>
                 <asp:HyperLink ID="link_contact" runat="server" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink></td></tr></table>
 
-        </div>
+        </div><br />
 
-    <div class="mainbody">
+    <div id="aboutus">
 
         <!-- Check to see if you are in postback.  If not, display the contact form. -->
         <% If Not IsPostBack Then%>
-
-        Your email address:<br />
+        <h2>
+        Your email address:</h2>
         <asp:TextBox ID="senderAddress" runat="server" Width="259px"></asp:TextBox>
         <br />
         <br />
        
-         Your message:<br /> 
+         <h2>Your message:</h2> 
         <!-- to make your box bigger add rows, columns, and textmode -->
         <asp:TextBox ID="senderMessage" runat="server" Rows="20" Columns="30" TextMode="MultiLine" Height="226px" Width="393px"></asp:TextBox>
         
@@ -40,14 +40,17 @@
         <br />
         <asp:Button ID="sendMail" runat="server" Text="Send" />
 
+        </div>
         <!-- If you are in postback, display the confirmation label. -->
         <%Else%>
 
+        <div class="deletemessage">
         <asp:Label ID="confirmSent" runat="server" Text=""></asp:Label>
+            </div>
 
         <!-- End your 'If' statement. -->
         <%End If%>
-        </div>
+       
     
 
   <div class="footer">Copyright 2014 Software Design and Development</div>

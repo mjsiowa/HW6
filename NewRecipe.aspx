@@ -146,7 +146,7 @@
                 <ItemTemplate>
                         </ItemTemplate>
             </asp:FormView>
-            <br />
+     
         </div>
 
         <div class="footer">Copyright 2014 Software Design and Development</div>

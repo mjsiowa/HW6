@@ -3,9 +3,10 @@ Imports System.Net.Mail
 Imports System.Net
 
 
-Partial Class _default
+Partial Class _contact
     Inherits System.Web.UI.Page
 
+   
     Protected Sub sendMail_Click(sender As Object, e As EventArgs) Handles sendMail.Click
         'Declare variables to create a new mail message and client connection.
         Dim msg As New MailMessage
@@ -33,7 +34,5 @@ Partial Class _default
         'After the message has displayed for 2 seconds, "reload" the page.
         Response.AddHeader("REFRESH", "2;URL=default.aspx")
 
-
     End Sub
-
 End Class
