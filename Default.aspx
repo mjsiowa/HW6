@@ -54,7 +54,7 @@
             <Columns>
                 <asp:BoundField DataField="name" HeaderText="Recipe Name" SortExpression="name" />
                 <asp:BoundField DataField="submitby" HeaderText="Submitted by" SortExpression="submitby" />
-                <asp:HyperLinkField DataNavigateUrlFields="recipeID" DataNavigateUrlFormatString="recipe.aspx?recipeID={0}" Text="Select" />
+                <asp:HyperLinkField DataNavigateUrlFields="recipeID" DataNavigateUrlFormatString="recipe.aspx?recipeID={0}" Text="Details View" />
             </Columns>
              <alternatingrowstyle cssclass="alt" />
         </asp:GridView>

@@ -59,6 +59,7 @@
             <asp:FormView ID="fmvw_receipe" runat="server" DataKeyNames="recipeID" DataSourceID="sds_mstaub_recipes" style="margin-right: 1px" Width="409px">
                 <EditItemTemplate>
                    
+                    <br />
                    <table cellpadding="8" class="tables">
                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;" >Receipe Name:</td>
                     <td><asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' /></td>
@@ -101,6 +102,7 @@
                     </InsertItemTemplate>
                 <ItemTemplate>
                    
+                    <br />
                     <table cellpadding="8" class="tables" >
                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;">Receipe Name:</td>
                     <td><asp:Label ID="nameLabel" runat="server" Text='<%# Bind("name") %>' /></td>
@@ -124,10 +126,13 @@
                     <td><asp:Label ID="ing_5Label" runat="server" Text='<%# Bind("ing_5") %>' /></td>
                     </tr>
                     <tr><td style="text-align:right; vertical-align:top; background-color:#F08080; border-right:1px solid black;">Preperation:</td>
-                    <td><asp:Label ID="prepLabel" runat="server" Text='<%# Bind("prep") %>' Height="40px" Width="200px" /></td>
+                    <td>
+                        <asp:Label ID="prepLabel" runat="server" Text='<%# Bind("prep") %>' />
+                        
+                        </td>
                     </tr>
                     <tr><td style="text-align:right; vertical-align:top; background-color:#F08080; border-right:1px solid black;">Notes:</td>
-                    <td><asp:Label ID="notesLabel" runat="server" Text='<%# Bind("notes") %>' Height="40px" Width="200px" /></td>
+                    <td><asp:Label ID="notesLabel" runat="server" Text='<%# Bind("notes") %>' /></td>
                     </tr>
                      <tr>
                     <td style="text-align:right; background-color:#F08080; border-right:1px solid black;"></td>

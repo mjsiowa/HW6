@@ -22,19 +22,20 @@
 
         </div><br />
 
-    <div id="aboutus">
+    
 
         <!-- Check to see if you are in postback.  If not, display the contact form. -->
         <% If Not IsPostBack Then%>
-        <h2>
-        Your email address:</h2>
-        <asp:TextBox ID="senderAddress" runat="server" Width="259px"></asp:TextBox>
+    <div id="aboutus">    
+    <h2>
+        Your email address: (i.e.&nbsp; jsmith@gmail.com)</h2>
+        <asp:TextBox ID="senderAddress" runat="server" Width="259px"></asp:TextBox><asp:RequiredFieldValidator ID="senderRequiredFieldValidator" runat="server" ErrorMessage=" Please enter valid email address" ControlToValidate="senderAddress"></asp:RequiredFieldValidator>
         <br />
         <br />
        
          <h2>Your message:</h2> 
         <!-- to make your box bigger add rows, columns, and textmode -->
-        <asp:TextBox ID="senderMessage" runat="server" Rows="20" Columns="30" TextMode="MultiLine" Height="226px" Width="393px"></asp:TextBox>
+        <asp:TextBox ID="senderMessage" runat="server" Rows="20" Columns="30" TextMode="MultiLine" Height="200px" Width="350px"></asp:TextBox>
         
         <br />
         <br />
