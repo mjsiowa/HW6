@@ -6,14 +6,7 @@
 <head runat="server">
     <title>Wicked Easy Recipes</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
-    <style type="text/css">
-        .auto-style1 {
-            width: 241px;
-        }
-        .auto-style2 {
-            width: 163px;
-        }
-    </style>
+   
 </head>
 <body>
     <form id="form1" runat="server">
@@ -67,34 +60,40 @@
                 <EditItemTemplate>
                    
                    <table cellpadding="8" class="tables">
-                   <tr><td style="text-align:right; background-color:#F08080;" class="auto-style2">Receipe Name:</td>
-                    <td class="auto-style1"><asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' /></td>
-                    </tr><tr><td style="text-align:right; background-color:#F08080;" class="auto-style2">Submitted by:</td>
-                    <td class="auto-style1"><asp:TextBox ID="submitbyTextBox" runat="server" Text='<%# Bind("submitby") %>' /></td>
+                   <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;" >Receipe Name:</td>
+                    <td><asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' /></td>
+                    </tr><tr style="border-bottom:1px solid black;">
+                    <td style="text-align:right; background-color:#F08080; border-right:1px solid black;" >Submitted by:</td>
+                    <td><asp:TextBox ID="submitbyTextBox" runat="server" Text='<%# Bind("submitby") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;" class="auto-style2">Ingredient #1:</td>
-                    <td class="auto-style1"><asp:TextBox ID="ing_1TextBox" runat="server" Text='<%# Bind("ing_1") %>' /></td>
+                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;" >Ingredient #1:</td>
+                    <td><asp:TextBox ID="ing_1TextBox" runat="server" Text='<%# Bind("ing_1") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;" class="auto-style2">Ingredient #2:</td>
-                    <td class="auto-style1"><asp:TextBox ID="ing_2TextBox" runat="server" Text='<%# Bind("ing_2") %>' /></td>
+                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;" >Ingredient #2:</td>
+                    <td><asp:TextBox ID="ing_2TextBox" runat="server" Text='<%# Bind("ing_2") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;" class="auto-style2">Ingredient #3:</td>
-                    <td class="auto-style1"><asp:TextBox ID="ing_3TextBox" runat="server" Text='<%# Bind("ing_3") %>' /></td>
+                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;" >Ingredient #3:</td>
+                    <td><asp:TextBox ID="ing_3TextBox" runat="server" Text='<%# Bind("ing_3") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;" class="auto-style2">Ingredient #4:</td>
-                    <td class="auto-style1"><asp:TextBox ID="ing_4TextBox" runat="server" Text='<%# Bind("ing_4") %>' /></td>
+                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;" >Ingredient #4:</td>
+                    <td><asp:TextBox ID="ing_4TextBox" runat="server" Text='<%# Bind("ing_4") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;" class="auto-style2">Ingredient #5:</td>
-                    <td class="auto-style1"><asp:TextBox ID="ing_5TextBox" runat="server" Text='<%# Bind("ing_5") %>' /></td>
+                    <tr style=" border-bottom:1px solid black;">
+                        <td style="text-align:right; background-color:#F08080; border-right:1px solid black;" >Ingredient #5:</td>
+                    <td><asp:TextBox ID="ing_5TextBox" runat="server" Text='<%# Bind("ing_5") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;" class="auto-style2">Preperation:</td>
-                    <td class="auto-style1"><asp:TextBox ID="prepTextBox" runat="server" Text='<%# Bind("prep") %>' Height="62px" TextMode="MultiLine" /></td>
+                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;" >Preperation:</td>
+                    <td><asp:TextBox ID="prepTextBox" runat="server" Text='<%# Bind("prep") %>' Height="62px" TextMode="MultiLine" /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;" class="auto-style2">Notes:</td>
-                    <td class="auto-style1"><asp:TextBox ID="notesTextBox" runat="server" Text='<%# Bind("notes") %>' Height="62px" TextMode="MultiLine" /></td>
+                    <tr>
+                        <td style="text-align:right; background-color:#F08080; border-right:1px solid black;" >Notes:</td>
+                    <td><asp:TextBox ID="notesTextBox" runat="server" Text='<%# Bind("notes") %>' Height="62px" TextMode="MultiLine" /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;" class="auto-style2"><asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" /></td>
-                    <td style="text-align:left; background-color:#F08080;" class="auto-style1"><asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" /></td>
+                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;"></td>
+                     <td style="text-align:left;">
+                         <asp:Button ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                         <asp:Button ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                         </td>
                 </tr>
                        </table>
                        </EditItemTemplate>
@@ -103,36 +102,39 @@
                 <ItemTemplate>
                    
                     <table cellpadding="8" class="tables" >
-                   <tr><td style="text-align:right; background-color:#F08080;">Receipe Name:</td>
+                   <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;">Receipe Name:</td>
                     <td><asp:Label ID="nameLabel" runat="server" Text='<%# Bind("name") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;">Submitted by:</td>
+                    <tr style="border-bottom:1px solid black;"><td style="text-align:right; background-color:#F08080; border-right:1px solid black;">Submitted by:</td>
                     <td><asp:Label ID="submitbyLabel" runat="server" Text='<%# Bind("submitby") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;">Ingredient #1:</td>
+                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;">Ingredient #1:</td>
                     <td><asp:Label ID="ing_1Label" runat="server" Text='<%# Bind("ing_1") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;">Ingredient #2:</td>
+                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;">Ingredient #2:</td>
                     <td><asp:Label ID="ing_2Label" runat="server" Text='<%# Bind("ing_2") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;">Ingredient #3:</td>
+                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;">Ingredient #3:</td>
                     <td><asp:Label ID="ing_3Label" runat="server" Text='<%# Bind("ing_3") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;">Ingredient #4:</td>
+                    <tr><td style="text-align:right; background-color:#F08080; border-right:1px solid black;">Ingredient #4:</td>
                     <td><asp:Label ID="ing_4Label" runat="server" Text='<%# Bind("ing_4") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; background-color:#F08080;">Ingredient #5:</td>
+                    <tr style="border-bottom:1px solid black;"><td style="text-align:right; background-color:#F08080; border-right:1px solid black;">Ingredient #5:</td>
                     <td><asp:Label ID="ing_5Label" runat="server" Text='<%# Bind("ing_5") %>' /></td>
                     </tr>
-                    <tr><td style="text-align:right; vertical-align:top; background-color:#F08080;">Preperation:</td>
+                    <tr><td style="text-align:right; vertical-align:top; background-color:#F08080; border-right:1px solid black;">Preperation:</td>
                     <td><asp:Label ID="prepLabel" runat="server" Text='<%# Bind("prep") %>' Height="40px" Width="200px" /></td>
                     </tr>
-                    <tr><td style="text-align:right; vertical-align:top; background-color:#F08080;">Notes:</td>
+                    <tr><td style="text-align:right; vertical-align:top; background-color:#F08080; border-right:1px solid black;">Notes:</td>
                     <td><asp:Label ID="notesLabel" runat="server" Text='<%# Bind("notes") %>' Height="40px" Width="200px" /></td>
                     </tr>
                      <tr>
-                    <td style="text-align:right; background-color:#F08080;"><asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" /></td>
-                    <td style="text-align:left; background-color:#F08080;"><asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" /></td>
+                    <td style="text-align:right; background-color:#F08080; border-right:1px solid black;"></td>
+                     <td style="text-align:left;">
+                         <asp:Button ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
+                         <asp:Button ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
+                    </td>
                     </tr>
                        </table>
                     </ItemTemplate>

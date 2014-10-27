@@ -55,90 +55,57 @@
                 </EditItemTemplate>
                 
                 <InsertItemTemplate>
-                   <table cellpadding="8" class="tables">
-                    <tr><td style="text-align:right; background-color:#F08080;">(*)Receipe Name:</td>
-                        <td><asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' /></td>
-                       <td>
-                           <asp:RequiredFieldValidator ID="NameFieldValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Please enter recipe name"></asp:RequiredFieldValidator>
-                           </td></tr>
-                           <tr>
-                               <td style="text-align:right; background-color:#F08080;">(*)Submitted by:</td>
-                               <td>
-                                   <asp:TextBox ID="submitbyTextBox" runat="server" Text='<%# Bind("submitby") %>' />
-                               </td>
-                               <td>
-                                   <asp:RequiredFieldValidator ID="SubmittedFieldValidator" runat="server" ErrorMessage="Please enter submitted by name" ControlToValidate="submitbyTextBox"></asp:RequiredFieldValidator></td>
-                           </tr>
-                         
-                               <tr>
-                                   <td style="text-align:right; background-color:#F08080;">(*)Ingredent #1</td>
-                                   <td>
-                                       <asp:TextBox ID="ing_1TextBox" runat="server" Text='<%# Bind("ing_1") %>' />
-                                   </td>
-                                   <td>
-                                       <asp:RequiredFieldValidator ID="ing1_FieldValidator" runat="server" ErrorMessage="Please enter at least 1 ingredent" ControlToValidate="ing_1TextBox"></asp:RequiredFieldValidator></td>
-                               </tr>
-                               <tr>
-                                 
-                                       <td style="text-align:right; background-color:#F08080;">Ingredent #2</td>
-                                       <td>
-                                           <asp:TextBox ID="ing_2TextBox" runat="server" Text='<%# Bind("ing_2") %>' />
-                                       </td>
-                                   <td></td>
-                                   </tr>
-                                   <tr>
-                                     
-                                           <td style="text-align:right; background-color:#F08080;">Ingredent #3</td>
-                                           <td>
-                                               <asp:TextBox ID="ing_3TextBox" runat="server" Text='<%# Bind("ing_3") %>' />
-                                           </td>
-                                       <td></td>
-                                       </tr>
-                                       <tr>
-                                       
-                                               <td style="text-align:right; background-color:#F08080;">Ingredent #4</td>
-                                               <td>
-                                                   <asp:TextBox ID="ing_4TextBox" runat="server" Text='<%# Bind("ing_4") %>' />
-                                               </td>
-                                           <td></td>
-                                           </tr>
-                                         
-                                               <tr>
-                                                   <td style="text-align:right; background-color:#F08080;">Ingredent #5</td>
-                                                   <td>
-                                                       <asp:TextBox ID="ing_5TextBox" runat="server" Text='<%# Bind("ing_5") %>' />
-                                                   </td>
-                                                   <td></td>
-                                               </tr>
-                                               
-                                                   <tr>
-                                                       <td style="text-align:right; vertical-align:top; background-color:#F08080;">(*)Preparation:</td>
-                                                       <td>
-                                                           <asp:TextBox ID="prepTextBox" runat="server" Rows="4" Text='<%# Bind("prep") %>' TextMode="MultiLine" />
-                                                       </td>
-                                                       <td>
-                                                           <asp:RequiredFieldValidator ID="prep_RequiredFieldValidator" runat="server" ErrorMessage="Please enter preparation instructions" ControlToValidate="prepTextBox"></asp:RequiredFieldValidator></td>
-                                                   </tr>
-                                                   <tr>
-                                                    
-                                                           <td style="text-align:right; vertical-align:top; background-color:#F08080;">Notes:</td>
-                                                           <td>
-                                                               <asp:TextBox ID="notesTextBox" runat="server" Rows="4" Text='<%# Bind("notes") %>' TextMode="MultiLine" />
-                                                           </td>
-                                                       <td></td>
-                                                       </tr>
-                                                     
-                                                           <tr>
-                                                               <td style="text-align:right; background-color:#F08080;">
-                                                                   <asp:Button ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Save" />
-                                                               </td>
-                                                               <td style="text-align:left; background-color:#F08080;">
-                                                                   <asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                                                               </td>
-                                                               <td style="text-align:right; background-color:#F08080;"></td>
-                                                           </tr>
-                
-
+                <table cellpadding="8" class="tables">
+                <tr>
+                <td style="text-align:right; background-color:#F08080; border-right:1px solid black">(*)Receipe Name:</td>
+                <td><asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' /></td>
+                <td><asp:RequiredFieldValidator ID="NameFieldValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Please enter recipe name"></asp:RequiredFieldValidator></td>
+                </tr>
+                <tr style=" border-bottom:1px solid black;">
+                <td style="text-align:right; background-color:#F08080; border-right:1px solid black">(*)Submitted by:</td>
+                <td><asp:TextBox ID="submitbyTextBox" runat="server" Text='<%# Bind("submitby") %>' /></td>
+                <td><asp:RequiredFieldValidator ID="SubmittedFieldValidator" runat="server" ErrorMessage="Please enter submitted by name" ControlToValidate="submitbyTextBox"></asp:RequiredFieldValidator></td>
+                </tr>
+                <tr>
+                <td style="text-align:right; background-color:#F08080; border-right:1px solid black">(*)Ingredent #1</td>
+                <td><asp:TextBox ID="ing_1TextBox" runat="server" Text='<%# Bind("ing_1") %>' /></td>
+                <td><asp:RequiredFieldValidator ID="ing1_FieldValidator" runat="server" ErrorMessage="Please enter at least 1 ingredent" ControlToValidate="ing_1TextBox"></asp:RequiredFieldValidator></td>
+                </tr>
+                <tr>
+                <td style="text-align:right; background-color:#F08080; border-right:1px solid black">Ingredent #2</td>
+                <td><asp:TextBox ID="ing_2TextBox" runat="server" Text='<%# Bind("ing_2") %>' /></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td style="text-align:right; background-color:#F08080; border-right:1px solid black">Ingredent #3</td>
+                <td><asp:TextBox ID="ing_3TextBox" runat="server" Text='<%# Bind("ing_3") %>' /></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td style="text-align:right; background-color:#F08080; border-right:1px solid black">Ingredent #4</td>
+                <td><asp:TextBox ID="ing_4TextBox" runat="server" Text='<%# Bind("ing_4") %>' /></td>
+                <td></td>
+                </tr>
+                <tr style=" border-bottom:1px solid black;">
+                <td style="text-align:right; background-color:#F08080; border-right:1px solid black">Ingredent #5</td>
+                <td><asp:TextBox ID="ing_5TextBox" runat="server" Text='<%# Bind("ing_5") %>' /></td>
+                <td></td>
+                </tr>
+                <tr><td style="text-align:right; vertical-align:top; background-color:#F08080; border-right:1px solid black">(*)Preparation:</td>
+                <td><asp:TextBox ID="prepTextBox" runat="server" Rows="4" Text='<%# Bind("prep") %>' TextMode="MultiLine" /></td>
+                <td><asp:RequiredFieldValidator ID="prep_RequiredFieldValidator" runat="server" ErrorMessage="Please enter preparation instructions" ControlToValidate="prepTextBox"></asp:RequiredFieldValidator></td>
+                </tr>
+                <tr>
+                <td style="text-align:right; vertical-align:top; background-color:#F08080; border-right:1px solid black">Notes:</td>
+                <td><asp:TextBox ID="notesTextBox" runat="server" Rows="4" Text='<%# Bind("notes") %>' TextMode="MultiLine" /></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td style="text-align:right; background-color:#F08080; border-right:1px solid black"></td>
+                <td style="text-align:left;"><asp:Button ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Save" />
+                <asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" /></td>
+                <td style="text-align:right;"></td>
+                </tr>
                 </table>
                     <br />
                 
